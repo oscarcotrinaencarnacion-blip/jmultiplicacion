@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tablas de Multiplicar</title>
+    <style>
+        /* --- Reseteo y Estilos Generales --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #e0eafc, #cfdef3);
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            padding: 2rem;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            color: #2c3e50;
+            margin-bottom: 0.5rem;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+        }
+
+        header p {
+            color: #7f8c8d;
+            font-size: 1.1rem;
+        }
+
+        /* --- Contenedor de las Tablas (Grid) --- */
+        .grid-tablas {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1.5rem;
+            width: 100%;
+            max-width: 1200px;
+        }
+
+        /* --- Tarjeta de cada Tabla --- */
+        .tarjeta-tabla {
+            background: #ffffff;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+            padding: 1.5rem;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-top: 5px solid #3498db;
+        }
+
+        /* Efecto al pasar el mouse */
+        .tarjeta-tabla:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Variación de colores para las tarjetas */
+        .tarjeta-tabla:nth-child(2n) { border-top-color: #2ecc71; }
+        .tarjeta-tabla:nth-child(3n) { border-top-color: #9b59b6; }
+        .tarjeta-tabla:nth-child(4n) { border-top-color: #e67e22; }
+
+        .tarjeta-tabla h2 {
+            font-size: 1.5rem;
+            color: #2c3e50;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #f1f2f6;
+        }
+
+        /* --- Estilos de las operaciones --- */
+        .operacion {
+            font-size: 1.1rem;
+            padding: 0.3rem 0;
+            color: #555;
+            display: flex;
+            justify-content: space-between;
+            padding: 0.4rem 1rem;
+        }
+
+        /* Alternancia de color en las filas para mejor lectura */
+        .operacion:nth-child(even) {
+            background-color: #f8f9fa;
+            border-radius: 5px;
+        }
+
+        .resultado {
+            font-weight: bold;
+            color: #2c3e50;
+        }
+
+        /* --- Pie de página --- */
+        footer {
+            margin-top: auto;
+            padding-top: 2rem;
+            color: #7f8c8d;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Tablas de Multiplicar</h1>
+        <p>Aprende y repasa las tablas del 1 al 4</p>
+    </header>
+
+    <main class="grid-tablas">
+        <section class="tarjeta-tabla">
+            <h2>Tabla del 1</h2>
+            <div class="operacion"><span>1 × 1 =</span> <span class="resultado">1</span></div>
+            <div class="operacion"><span>1 × 2 =</span> <span class="resultado">2</span></div>
+            <div class="operacion"><span>1 × 3 =</span> <span class="resultado">3</span></div>
+            <div class="operacion"><span>1 × 4 =</span> <span class="resultado">4</span></div>
+            <div class="operacion"><span>1 × 5 =</span> <span class="resultado">5</span></div>
+            <div class="operacion"><span>1 × 6 =</span> <span class="resultado">6</span></div>
+            <div class="operacion"><span>1 × 7 =</span> <span class="resultado">7</span></div>
+            <div class="operacion"><span>1 × 8 =</span> <span class="resultado">8</span></div>
+            <div class="operacion"><span>1 × 9 =</span> <span class="resultado">9</span></div>
+            <div class="operacion"><span>1 × 10 =</span> <span class="resultado">10</span></div>
+        </section>
+
+        <section class="tarjeta-tabla">
+            <h2>Tabla del 2</h2>
+            <div class="operacion"><span>2 × 1 =</span> <span class="resultado">2</span></div>
+            <div class="operacion"><span>2 × 2 =</span> <span class="resultado">4</span></div>
+            <div class="operacion"><span>2 × 3 =</span> <span class="resultado">6</span></div>
+            <div class="operacion"><span>2 × 4 =</span> <span class="resultado">8</span></div>
+            <div class="operacion"><span>2 × 5 =</span> <span class="resultado">10</span></div>
+            <div class="operacion"><span>2 × 6 =</span> <span class="resultado">12</span></div>
+            <div class="operacion"><span>2 × 7 =</span> <span class="resultado">14</span></div>
+            <div class="operacion"><span>2 × 8 =</span> <span class="resultado">16</span></div>
+            <div class="operacion"><span>2 × 9 =</span> <span class="resultado">18</span></div>
+            <div class="operacion"><span>2 × 10 =</span> <span class="resultado">20</span></div>
+        </section>
+
+        <section class="tarjeta-tabla">
+            <h2>Tabla del 3</h2>
+            <div class="operacion"><span>3 × 1 =</span> <span class="resultado">3</span></div>
+            <div class="operacion"><span>3 × 2 =</span> <span class="resultado">6</span></div>
+            <div class="operacion"><span>3 × 3 =</span> <span class="resultado">9</span></div>
+            <div class="operacion"><span>3 × 4 =</span> <span class="resultado">12</span></div>
+            <div class="operacion"><span>3 × 5 =</span> <span class="resultado">15</span></div>
+            <div class="operacion"><span>3 × 6 =</span> <span class="resultado">18</span></div>
+            <div class="operacion"><span>3 × 7 =</span> <span class="resultado">21</span></div>
+            <div class="operacion"><span>3 × 8 =</span> <span class="resultado">24</span></div>
+            <div class="operacion"><span>3 × 9 =</span> <span class="resultado">27</span></div>
+            <div class="operacion"><span>3 × 10 =</span> <span class="resultado">30</span></div>
+        </section>
+
+        <section class="tarjeta-tabla">
+            <h2>Tabla del 4</h2>
+            <div class="operacion"><span>4 × 1 =</span> <span class="resultado">4</span></div>
+            <div class="operacion"><span>4 × 2 =</span> <span class="resultado">8</span></div>
+            <div class="operacion"><span>4 × 3 =</span> <span class="resultado">12</span></div>
+            <div class="operacion"><span>4 × 4 =</span> <span class="resultado">16</span></div>
+            <div class="operacion"><span>4 × 5 =</span> <span class="resultado">20</span></div>
+            <div class="operacion"><span>4 × 6 =</span> <span class="resultado">24</span></div>
+            <div class="operacion"><span>4 × 7 =</span> <span class="resultado">28</span></div>
+            <div class="operacion"><span>4 × 8 =</span> <span class="resultado">32</span></div>
+            <div class="operacion"><span>4 × 9 =</span> <span class="resultado">36</span></div>
+            <div class="operacion"><span>4 × 10 =</span> <span class="resultado">40</span></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Práctica de HTML y CSS - Hecho con flexibilidad</p>
+    </footer>
+
+</body>
+</html>
